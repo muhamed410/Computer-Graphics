@@ -1,7 +1,7 @@
 // SHADOWS
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
-import GUI from 'lil-gui' // ❌ ishte 'GUI = from', tani saktë
+import GUI from 'lil-gui' 
 
 const gui = new GUI()
 
@@ -11,7 +11,7 @@ const ambientLight = new THREE.AmbientLight(0xffffff, 0.8)
 gui.add(ambientLight, 'intensity').min(0).max(3).step(0.001)
 scene.add(ambientLight)
 
-// ❌ kishte 'const.directionalLight' në vend të 'const directionalLight'
+
 const directionalLight = new THREE.DirectionalLight(0xffffff, 1.3)
 directionalLight.castShadow = true
 directionalLight.position.set(2, 2, -1)
